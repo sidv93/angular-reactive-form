@@ -1,0 +1,18 @@
+<form [formGroup]="myForm">
+
+    <div formArrayName="phones">
+
+        <div *ngFor="let phone of phoneForms.controls; let i=index" [formGroupName]="i">
+
+            <input formControlName="area">
+            <input formControlName="prefix">
+            <input formControlName="line">
+
+            <button (click)="deletePhone(i)">Delete</button>
+
+        </div>
+    </div>
+
+    <button (click)="addPhone()">Add Phone Number</button>
+
+</form>

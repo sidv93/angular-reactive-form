@@ -1,0 +1,20 @@
+<form [formGroup]="myForm">
+    <input formControlName="email">
+
+    <h4>Home Phone</h4>
+
+    <div formGroupName="homePhone">
+        <input formControlName="area">
+        <input formControlName="prefix">
+        <input formControlName="line">
+    </div>
+
+    <h4>Work Phone</h4>
+
+    <div formGroupName="workPhone">
+        <input formControlName="area">
+        <input formControlName="prefix">
+        <input formControlName="line">
+    </div>
+
+</form>
